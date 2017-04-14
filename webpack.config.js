@@ -1,33 +1,27 @@
-'use strict';
-var path = require('path');
-var glob = require('glob');
-var webpack = require('webpack');
-var precss = require('precss');
-var autoprefixer = require('autoprefixer');
+const path = require('path');
+const glob = require('glob');
+const webpack = require('webpack');
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
 
-var plugins = [
+const plugins = [
   new webpack.optimize.DedupePlugin(),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
     }
-  }),
+  })
 ];
 
-var entry = {};
-var mainEntryPoints = glob.sync(
-  path.join(__dirname, './src/*.js')
-);
-
-entry['react-coverflow'] = mainEntryPoints;
-
 module.exports = {
-  entry: entry,
+  entry: {
+    'react-coverflow': glob.sync(path.join(__dirname, './src/*.js'))
+  },
   output: {
-    path: 'dist',
+    path: path.resolve(__dirname, "./dist"),
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'react-converflow',
+    library: 'react-coverflow',
   },
   externals: [
     {
@@ -73,7 +67,7 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  postcss: function () {
+  postcss: function() {
     return [precss, autoprefixer];
   }
 };
