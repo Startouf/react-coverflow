@@ -1,6 +1,6 @@
 {
   "name": "react-coverflow-myjobglasses",
-  "version": "0.2.4-rc5",
+  "version": "0.2.4-rc6",
   "description": "Carousel of coverflow effect",
   "main": "main.js",
   "scripts": {
