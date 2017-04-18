@@ -33,6 +33,7 @@ ReactDOM.render(
     <img src='images/album-5.png' alt='Album five' data-action="http://www.bbc.co.uk"/>
     <img src='images/album-6.png' alt='Album six' data-action="https://medium.com"/>
     <img src='images/album-7.png' alt='Album seven' data-action="http://www.google.com"/>
+    <a href="/"><div>I'm not just an image !<br /> I'm a link</div></a>
     <img src='images/album-1.png' alt='Album one' data-action="https://facebook.github.io/react/"/>
     <img src='images/album-2.png' alt='Album two' data-action="http://passer.cc"/>
     <img src='images/album-3.png' alt='Album three' data-action="https://doce.cc/"/>
