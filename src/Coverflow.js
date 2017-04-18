@@ -219,7 +219,7 @@ class Coverflow extends Component {
           >
           {figureElement}
           {
-            enableHeading &&
+            enableHeading && !!figureElement.props.alt &&
             <div className={styles.text}>{figureElement.props.alt}</div>
           }
         </figure>
